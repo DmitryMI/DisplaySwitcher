@@ -31,7 +31,12 @@ int main(int argc, char** argv)
 		cout << "Turning display on" << endl;
 		set_display_mode(MONITOR_ON);
 	}
-	else if(mode_str == "off")
+	else if (mode_str == "off")
+	{
+		cout << "Turning display off" << endl;
+		set_display_mode(MONITOR_OFF);
+	}
+	else if(mode_str == "off_delayed")
 	{
 		cout << "Turning display off after 5 seconds" << endl;
 		Sleep(5000);
@@ -40,7 +45,6 @@ int main(int argc, char** argv)
 	else if (mode_str == "blink")
 	{
 		cout << "Blink!" << endl;
-		Sleep(3000);
 		set_display_mode(MONITOR_OFF);
 		Sleep(10000);
 		set_display_mode(MONITOR_ON);
